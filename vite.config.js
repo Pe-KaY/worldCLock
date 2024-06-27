@@ -1,7 +1,7 @@
 import { resolve } from "path"
-import { definedConfig } from "vite"
+import { defineConfig } from "vite"
 
-export default definedConfig({
+export default defineConfig({
   build: {
     rollupOptions: {
       input: {
