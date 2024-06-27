@@ -1,4 +1,4 @@
-#sun {
+.sun {
   width: 100px;
   margin: 50px;
   display: block;
@@ -34,7 +34,7 @@
 
 /* moon  */
 
-#moon {
+.moon {
   position: absolute;
   width: 6rem;
   left: 28%;
@@ -68,7 +68,4 @@
   to {
     transform: rotate3d(0, 0, 1, 0deg);
   }
-}
-
-.swing {
 }

@@ -9,8 +9,9 @@ const time = () => {
   const timeFormatName = document.querySelector("#format > p")
 
   // MOON and SUN images to switch day and night
-  const sun = document.getElementById("sun")
-  const moon = document.getElementById("moon")
+  const sun = document.querySelector(".sun")
+  const moon = document.querySelector(".moon")
+  let isDay = true
 
   //  Alarm elements
   const alarmContainer = document.querySelector(".alarmwrapper")
@@ -64,11 +65,13 @@ const time = () => {
     alarmContainer.classList.toggle("hide")
 
     // display alarmnotification
+
     alarmNotification.classList.toggle("hide")
     alarmNotiText.textContent = `${alarmHour.value.padStart(
       2,
       "0"
     )}:${minute.padStart(2, "0")}${alarmPm.checked ? "pm" : "am"}`
+
     // sets back values to empty
     alarmHour.value = ""
     alarmMinute.value = ""
@@ -89,14 +92,14 @@ const time = () => {
     let minutes = date.getMinutes()
     let seconds = date.getSeconds()
 
-    if (parseInt(hours) === 6) {
-      sun.classList.toggle("hide")
-      moon.classList.toggle("hide")
+    if (parseInt(hours) < 18) {
+      sun.style.display = "block"
+      moon.classList.add("hide")
       document.querySelector(".greeting").textContent = "Good Day"
     }
-    if (parseInt(hours) === 18) {
-      sun.classList.toggle("hide")
-      moon.classList.toggle("hide")
+    if (parseInt(hours) >= 18) {
+      sun.style.display = "none"
+      moon.classList.remove("hide")
       document.querySelector(".greeting").textContent = "Good Night"
     }
 
