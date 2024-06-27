@@ -65,9 +65,10 @@ const time = () => {
 
     // display alarmnotification
     alarmNotification.classList.toggle("hide")
-    alarmNotiText.textContent = `${alarmHour.value}:${minute}${
-      alarmPm.checked ? "pm" : "am"
-    }`
+    alarmNotiText.textContent = `${alarmHour.value.padStart(
+      2,
+      "0"
+    )}:${minute.padStart(2, "0")}${alarmPm.checked ? "pm" : "am"}`
     // sets back values to empty
     alarmHour.value = ""
     alarmMinute.value = ""
