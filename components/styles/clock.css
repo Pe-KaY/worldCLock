@@ -1,0 +1,176 @@
+.worldclock__clockwrapper {
+  /* border: 2px solid green; */
+  height: 20rem;
+  display: flex;
+  flex-direction: column;
+}
+
+/* clock settings wraper */
+.worldclock__clockandSettingsWrap {
+  display: flex;
+  height: 100%;
+}
+
+/* greeting */
+.greeting {
+  color: white;
+  font-weight: bolder;
+  padding: 0.3rem;
+  font-size: 3.3rem;
+}
+
+/* clock */
+.clock {
+  /* border: 2px solid orange; */
+  width: 70%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* settings */
+.settings {
+  width: 30%;
+  height: 100%;
+  /* border: 2px solid green; */
+}
+
+/* Digital Clock starts here*/
+.digitalclock {
+  /* border: 2px solid blue; */
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Time(didital) */
+#digitalTime {
+  font-size: 4rem;
+  font-family: monospace;
+  font-weight: boldelr;
+  color: #fff;
+  text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #f09,
+    0 0 82px #f09, 0 0 92px #f09, 0 0 102px #f09, 0 0 151px #f09;
+}
+#ampm {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #f09,
+    0 0 82px #f09, 0 0 92px #f09, 0 0 102px #f09, 0 0 151px #f09;
+}
+/* Digital Clock starts here*/
+
+.switchclock {
+  text-align: center;
+  gap: 0.5rem;
+  font-weight: bolder;
+  justify-content: center;
+}
+
+/* Digittal clock ends here */
+
+/* settings starts here */
+.settings {
+  border: 2px solid #fff;
+  box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem #39ff14,
+    /* Green */ 0 0 0.8rem #39ff14, /* Green */ 0 0 2.8rem #39ff14,
+    /* Green */ inset 0 0 1.3rem #39ff14; /* Green */
+  border-radius: 86% 14% 70% 30% / 30% 88% 12% 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.settingstext {
+  color: #ff007f; /* Reddish-purple color */
+  text-shadow: 0 0 7px #ff007f, 0 0 10px #ff007f, 0 0 21px #ff007f,
+    0 0 42px #ff00ff, 0 0 82px #ff00ff, 0 0 92px #ff00ff, 0 0 102px #ff00ff,
+    0 0 151px #ff00ff;
+  font-size: 1.5rem;
+  font-family: "Edu NSW ACT Foundation", sans-serif;
+  font-weight: bolder;
+}
+/* settings ends here */
+
+/* Analogue clock starts here */
+.analogueclock {
+  /* border: 2px solid pink; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+/* Analogue Styling */
+
+.clockAnalogue {
+  position: relative;
+  width: 250px;
+  height: 236px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background: black; */
+}
+
+.number {
+  position: absolute;
+  transform: rotate(calc(30deg * var(--n)));
+  text-align: center;
+  inset: 20px;
+  font-size: 40px;
+  color: #00daff;
+  text-shadow: 0 0 12px #ee00ff;
+}
+.number b {
+  display: inline-block;
+  transform: rotate(calc(-30deg * var(--n)));
+}
+.hour-hand,
+.minute-hand,
+.second-hand {
+  position: absolute;
+  left: 50%;
+  bottom: 50%;
+  --rotate: 0;
+  transform: translate(-50%) rotate(calc(var(--rotate) * 1deg));
+  transform-origin: bottom;
+  border-radius: 30px 30px 0 0;
+}
+.hour-hand {
+  width: 8px;
+  height: 50px;
+  background: linear-gradient(#00d9ff, #ee00ff);
+}
+.minute-hand {
+  width: 12px;
+  height: 60px;
+  background: linear-gradient(to top, #00d9ff, #ee00ff);
+}
+.second-hand {
+  width: 6px;
+  height: 65px;
+  background: linear-gradient(to top, #00d9ff, #ee00ff);
+}
+.center-dot {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background-color: #ee00ff;
+  border: 6px solid #00d9ff;
+  border-radius: 50%;
+}
+
+/* toggling analogue and digital */
+
+.hide {
+  display: none;
+}

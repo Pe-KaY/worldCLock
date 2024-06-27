@@ -1,0 +1,126 @@
+body {
+  background: black;
+  font-family: sans-serif;
+}
+
+h1 {
+  color: #fff;
+  text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #f09,
+    0 0 82px #f09, 0 0 92px #f09, 0 0 102px #f09, 0 0 151px #f09;
+  animation: flicker 1.5s infinite alternate;
+}
+
+h2 {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+select {
+  background: #eaddcf;
+  border: 2px solid #020826;
+  border-radius: 8px;
+  color: #020826;
+  cursor: pointer;
+  font-size: 14px;
+  outline: none;
+  margin-bottom: 10px;
+  padding: 8px;
+  width: 100%;
+}
+
+.container {
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
+  margin: 60px auto;
+  max-width: 500px;
+  padding: 20px 30px;
+}
+
+.city {
+  background: #eaddcf;
+  border-radius: 8px;
+  margin-top: 15px;
+  opacity: 0.8;
+  padding: 10px;
+}
+
+.city:last-child {
+  margin-bottom: 10px;
+}
+
+.city-name {
+  color: #020826;
+}
+
+.city-time,
+.city-date {
+  color: #716040;
+}
+
+.city-date {
+  font-size: 14px;
+}
+
+.city-time {
+  color: #020826;
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.name-time {
+  display: flex;
+  justify-content: space-between;
+}
+
+small {
+  font-size: 20px;
+}
+
+a {
+  color: #f25042;
+  text-decoration: none;
+}
+
+footer a {
+  text-decoration: underline;
+}
+
+button {
+  display: block;
+  font-size: 16px;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background-color: #f25042;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  border-radius: 8px;
+  color: #fffffe;
+  cursor: pointer;
+  border: none;
+}
+
+footer {
+  color: #020826;
+  font-size: 14px;
+  opacity: 0.7;
+  text-align: center;
+}
+
+/* flicker animation */
+@keyframes flicker {
+  0%,
+  18%,
+  22%,
+  25%,
+  53%,
+  57%,
+  100% {
+    text-shadow: 0 0 4px #fff, 0 0 11px #fff, 0 0 19px #fff, 0 0 40px #0fa,
+      0 0 80px #0fa, 0 0 90px #0fa, 0 0 100px #0fa, 0 0 150px #0fa;
+  }
+  20%,
+  24%,
+  55% {
+    text-shadow: none;
+  }
+}

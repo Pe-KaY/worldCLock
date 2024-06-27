@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- fontawsome -->
+    <script
+      src="https://kit.fontawesome.com/b1d08ee4bb.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- font -->
+    <link
+      href="https://fonts.cdnfonts.com/css/stylish-calligraphy"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.cdnfonts.com/css/edu-nsw-act-foundation"
+      rel="stylesheet"
+    />
+
+    <title>World Clock</title>
+  </head>
+  <body>
+    <div class="alarmwrapper hide">
+      <div id="alarmborder">
+        <h1>Alarm</h1>
+        <div id="minhour">
+          <span>
+            <input
+              type="number"
+              name="hour"
+              id="alarmhour"
+              placeholder="Hour"
+              min="1"
+              max="12"
+          /></span>
+          <span>
+            <input
+              type="number"
+              name="minutes"
+              id="alarmminute"
+              placeholder="Minute"
+              min="0"
+              max="59"
+          /></span>
+        </div>
+        <div id="amorpmwrapper">
+          <span
+            ><label for="am">AM</label><input type="radio" name="ampm" id="am"
+          /></span>
+          <span
+            ><label for="pm">PM</label
+            ><input type="radio" name="ampm" value="yes" id="pm"
+          /></span>
+        </div>
+      </div>
+      <span id="alarm-saveclose">
+        <button id="savealarm">Save</button>
+        <button id="closealarm">Close</button>
+      </span>
+    </div>
+    <div id="loading">
+      <h1>Loading...</h1>
+    </div>
+    <div class="worldclock__wrapper">
+      <!-- lock page -->
+      <div class="worldclock__lockpage edu-font">
+        <h1>Click To Unlock</h1>
+        <div class="worldclock__locks">
+          <i class="fa-solid fa-lock shakeX"></i>
+          <i class="fa-solid fa-unlock"></i>
+        </div>
+      </div>
+      <!-- lock page ends here -->
+
+      <!-- Alarm starts here -->
+
+      <div class="worlclock__alarm hide">
+        <span class="alarmnoti hide">
+          <i class="fa-solid fa-xmark"></i>
+          <i class="fa-solid fa-volume-high"></i> Alarm:<span
+            id="alarmnotitext"
+          ></span>
+        </span>
+        <h2 class="alarmtext flicker">ALARM</h2>
+        <i class="fa-solid fa-bell"></i>
+      </div>
+      <!-- Main App alarm ends here-->
+
+      <!-- clock Display -->
+      <div class="worldclock__clockwrapper hide">
+        <h2 class="greeting edu-font">Good Day</h2>
+
+        <!-- svg sun starts here -->
+        <svg
+          id="sun"
+          version="1.1"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          x="0px"
+          y="0px"
+          viewBox="0 0 32 32"
+        >
+          <path
+            class="one"
+            d="M16,26c1.1,0,2,0.9,2,2v2c0,1.1-0.9,2-2,2s-2-0.9-2-2v-2C14,26.9,14.9,26,16,26z"
+          />
+          <path
+            class="one"
+            d="M16,6c-1.1,0-2-0.9-2-2V2c0-1.1,0.9-2,2-2s2,0.9,2,2v2C18,5.1,17.1,6,16,6z"
+          />
+          <path
+            class="one"
+            d="M30,14c1.1,0,2,0.9,2,2s-0.9,2-2,2h-2c-1.1,0-2-0.9-2-2s0.9-2,2-2H30z"
+          />
+          <path
+            class="one"
+            d="M6,16 c0,1.1-0.9,2-2,2H2c-1.1,0-2-0.9-2-2s0.9-2,2-2h2C5.1,14,6,14.9,6,16z"
+          />
+          <path
+            class="two"
+            d="M25.9,23.1l1.4,1.4c0.8,0.8,0.8,2,0,2.8s-2,0.8-2.8,0l-1.4-1.4c-0.8-0.8-0.8-2,0-2.8S25.1,22.3,25.9,23.1z"
+          />
+          <path
+            class="two"
+            d=" M6.1,8.9L4.7,7.5c-0.8-0.8-0.8-2,0-2.8s2-0.8,2.8,0l1.4,1.4c0.8,0.8,0.8,2,0,2.8S6.9,9.7,6.1,8.9z"
+          />
+          <path
+            class="two"
+            d="M25.9,8.9c-0.8,0.8-2,0.8-2.8,0s-0.8-2,0-2.8l1.4-1.4c0.8-0.8,2-0.8,2.8,0s0.8,2,0,2.8L25.9,8.9z"
+          />
+          <path
+            class="two"
+            d="M6.1,23.1c0.8-0.8,2-0.8,2.8,0s0.8,2,0,2.8l-1.4,1.4c-0.8,0.8-2,0.8-2.8,0s-0.8-2,0-2.8C4.7,24.5,6.1,23.1,6.1,23.1z"
+          />
+          <path
+            class="middle"
+            d="M16,8c-4.4,0-8,3.6-8,8s3.6,8,8,8s8-3.6,8-8S20.4,8,16,8z M16,21c-2.8,0-5-2.2-5-5s2.2-5,5-5s5,2.2,5,5
+       S18.8,21,16,21z"
+          />
+        </svg>
+        <!-- svg sun ends here here -->
+
+        <!-- svg moon starts here -->
+        <div id="moon" class="hide">
+          <img src="./images/moon.png" alt="" />
+        </div>
+        <!-- svg moon ends here -->
+
+        <div class="worldclock__clockandSettingsWrap">
+          <div class="clock">
+            <!-- digital clock -->
+            <div class="digitalclock">
+              <p id="digitalTime">loading</p>
+              <span id="ampm"></span>
+            </div>
+            <!-- analogue clock -->
+            <div class="analogueclock hide">
+              <div class="clockAnalogue">
+                <div class="number" style="--n: 1"><b>1</b></div>
+                <div class="number" style="--n: 2"><b>2</b></div>
+                <div class="number" style="--n: 3"><b>3</b></div>
+                <div class="number" style="--n: 4"><b>4</b></div>
+                <div class="number" style="--n: 5"><b>5</b></div>
+                <div class="number" style="--n: 6"><b>6</b></div>
+                <div class="number" style="--n: 7"><b>7</b></div>
+                <div class="number" style="--n: 8"><b>8</b></div>
+                <div class="number" style="--n: 9"><b>9</b></div>
+                <div class="number" style="--n: 10"><b>10</b></div>
+                <div class="number" style="--n: 11"><b>11</b></div>
+                <div class="number" style="--n: 12"><b>12</b></div>
+                <div class="hour-hand" id="hour-hand"></div>
+                <div class="minute-hand" id="minute-hand"></div>
+                <div class="second-hand" id="second-hand"></div>
+                <div class="center-dot"></div>
+              </div>
+            </div>
+          </div>
+          <div class="settings">
+            <div id="format" class="switchclock">
+              <p class="settingstext">12Hours</p>
+            </div>
+            <div id="switchclocks" class="switchclock">
+              <p class="settingstext" id="clockMode">Mode</p>
+            </div>
+            <div class="switchclock">
+              <a class="settingstext" href="./worldclock.html">Wold Clock</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- clock Display ends -->
+      <footer class="hide">
+        <img src="./images/city.png" alt="" />
+        <div class="anim bike">
+          <img src="./images/cyclist.gif" alt="" />
+        </div>
+      </footer>
+    </div>
+
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

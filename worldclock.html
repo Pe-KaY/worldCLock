@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./components/styles/worldclock.css" />
+    <!-- moment -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.30.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.45/moment-timezone-with-data-1970-2030.min.js"></script>
+    <link
+      href="https://fonts.cdnfonts.com/css/stylish-calligraphy"
+      rel="stylesheet"
+    />
+
+    <title>World Clock</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>World Clock</h1>
+      <select name="" id="city-selector">
+        <option value="">Select a city</option>
+
+        <option value="current">My current location</option>
+        <optgroup label="Europe">
+          <option value="Europe/Athens">Athens</option>
+          <option value="Europe/Paris">Paris</option>
+          <option value="Europe/Madrid">Madrid</option>
+          <option value="Europe/Berlin">Berlin</option>
+          <option value="Europe/Stockholm">Stockholm</option>
+        </optgroup>
+        <optgroup label="America">
+          <option value="America/Los_Angeles">Los Angeles</option>
+          <option value="America/Mexico_City">Mexico City</option>
+          <option value="America/New_York">New York</option>
+          <option value="America/Barbados">Barbados</option>
+          <option value="America/Detroit">Detroit</option>
+        </optgroup>
+        <optgroup label="Asia">
+          <option value="Asia/Jakarta">Jakarta</option>
+          <option value="Asia/Shanghai">Shanghai</option>
+          <option value="Asia/Taipei">Taipei</option>
+          <option value="Asia/Tokyo">Tokyo</option>
+          <option value="Asia/Manila">Manila</option>
+        </optgroup>
+        <optgroup label="Australia">
+          <option value="Australia/Brisbane">Brisbane</option>
+          <option value="Australia/Canberra">Canberra</option>
+          <option value="Australia/Melbourne">Melbourne</option>
+          <option value="Australia/Queensland">Queensland</option>
+          <option value="Australia/Sydney">Sydney</option>
+        </optgroup>
+        <optgroup label="Africa">
+          <option value="Africa/Cairo">Cairo</option>
+          <option value="Africa/Johannesburg">Johannesburg</option>
+          <option value="Africa/Maputo">Maputo</option>
+          <option value="Africa/Nairobi">Nairobi</option>
+          <option value="Africa/Timbuktu">Timbuktu</option>
+        </optgroup>
+      </select>
+      <div id="cities">
+        <div class="city" id="newyork">
+          <div class="name-time">
+            <div class="city-name">
+              <h2>New York</h2>
+            </div>
+            <div class="city-time"></div>
+          </div>
+          <div class="city-date"></div>
+        </div>
+        <div class="city" id="london">
+          <div class="name-time">
+            <div class="city-name"><h2>London</h2></div>
+            <div class="city-time"></div>
+          </div>
+          <div class="city-date"></div>
+        </div>
+        <div class="city" id="singapore">
+          <div class="name-time">
+            <div class="city-name"><h2>Singapore</h2></div>
+            <div class="city-time"></div>
+          </div>
+          <div class="city-date"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./components/js/worldclock.js"></script>
+  </body>
+</html>

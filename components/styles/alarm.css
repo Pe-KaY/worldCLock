@@ -1,0 +1,58 @@
+.worlclock__alarm {
+  /* border: 2px solid green; */
+  display: flex;
+  justify-content: end;
+  gap: 0.5rem;
+}
+
+/* alarm notification text */
+.alarmnoti {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  color: #ff007f; /* Reddish-purple color */
+  text-shadow: 0 0 7px #ff007f, 0 0 10px #ff007f, 0 0 21px #ff007f,
+    0 0 42px #ff00ff, 0 0 82px #ff00ff, 0 0 92px #ff00ff, 0 0 102px #ff00ff,
+    0 0 151px #ff00ff;
+}
+.alarmtext {
+  animation: flicker 1.5s infinite alternate;
+}
+
+.fa-bell {
+  display: block;
+  font-size: 2rem;
+  color: #9717ed;
+  text-shadow: 0 0 7px #b32a91, 0 0 10px #b32a91, 0 0 21px #b32a91,
+    0 0 42px rgb(169, 30, 190), 0 0 82px rgb(169, 30, 190),
+    0 0 92px rgb(169, 30, 190), 0 0 102px rgb(169, 30, 190),
+    0 0 151px rgb(169, 30, 190);
+}
+
+.alarmtext {
+  font-family: "Bold  Stylish Calligraphy", sans-serif;
+  color: #fff;
+  text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #0fa,
+    0 0 82px #0fa, 0 0 92px #0fa, 0 0 102px #0fa, 0 0 151px #0fa;
+}
+
+/* flickering animation for alarm */
+@keyframes flicker {
+  0%,
+  18%,
+  22%,
+  25%,
+  53%,
+  57%,
+  100% {
+    text-shadow: 0 0 4px #fff, 0 0 11px #fff, 0 0 19px #fff, 0 0 40px #0fa,
+      0 0 80px #0fa, 0 0 90px #0fa, 0 0 100px #0fa, 0 0 150px #0fa;
+  }
+  20%,
+  24%,
+  55% {
+    text-shadow: none;
+  }
+}

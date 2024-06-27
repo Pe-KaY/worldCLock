@@ -1,0 +1,74 @@
+#sun {
+  width: 100px;
+  margin: 50px;
+  display: block;
+  animation: rotation 10s linear infinite;
+  .one {
+    transition: fill 1s;
+  }
+
+  &:hover {
+    .one {
+      fill: #ff0000;
+    }
+  }
+}
+.two {
+  fill: #ffce00;
+}
+.one {
+  fill: #ffb000;
+}
+.middle {
+  fill: #ffff00;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* moon  */
+
+#moon {
+  position: absolute;
+  width: 6rem;
+  left: 28%;
+  transform-origin: top center;
+  animation-name: swing;
+  animation-duration: 3s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+/* moon animation */
+
+@keyframes swing {
+  20% {
+    transform: rotate3d(0, 0, 1, 15deg);
+  }
+
+  40% {
+    transform: rotate3d(0, 0, 1, -10deg);
+  }
+
+  60% {
+    transform: rotate3d(0, 0, 1, 5deg);
+  }
+
+  80% {
+    transform: rotate3d(0, 0, 1, -5deg);
+  }
+
+  to {
+    transform: rotate3d(0, 0, 1, 0deg);
+  }
+}
+
+.swing {
+}

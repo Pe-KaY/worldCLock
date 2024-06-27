@@ -1,0 +1,130 @@
+.worldclock__lockpage {
+  /* border: 2px solid green; */
+  background-color: rgba(0, 0, 0, 0.635);
+  backdrop-filter: blur(5px);
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  /* display: none; */
+  z-index: 99;
+}
+
+/* lock tezxt */
+.worldclock__lockpage > h1 {
+  font-weight: bolder;
+  background: linear-gradient(to right, #ff7e5f, #feb47b);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* locks container */
+.worldclock__locks {
+  /* border: 2px solid red; */
+  width: 5rem;
+  height: 5rem;
+  position: relative;
+  display: grid;
+  place-items: center;
+}
+
+/* padlocks */
+.fa-lock,
+.fa-unlock {
+  font-size: 3rem;
+}
+
+.fa-lock {
+  color: red;
+}
+.fa-unlock {
+  position: absolute;
+  inset: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: green;
+  display: none;
+}
+
+/* animation for lock text */
+@keyframes locktext {
+  from {
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  to {
+    background: linear-gradient(to right, #ec3103, #8af606);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+.lockTextanim {
+  animation: locktext 4s ease-in-out;
+}
+
+/* animate lock screen icon */
+@keyframes shakeX {
+  from,
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translate3d(-10px, 0, 0);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translate3d(10px, 0, 0);
+  }
+}
+
+.shakeX {
+  animation: shakeX 2s ease-in-out infinite;
+}
+
+/* aimation for exiting lockscreen */
+@keyframes backOutUp {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  20% {
+    transform: translateY(0px) scale(0.7);
+    opacity: 0.7;
+  }
+
+  100% {
+    transform: translateY(-700px) scale(0.7);
+    opacity: 0.7;
+  }
+}
+
+.backOutUp {
+  animation: backOutUp 2s ease-in-out forwards;
+}
+
+/* toggling visibility of locked icons */
+.off {
+  display: none;
+}
+
+.on {
+  display: block;
+}
