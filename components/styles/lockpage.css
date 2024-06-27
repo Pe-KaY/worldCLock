@@ -39,7 +39,10 @@
 }
 
 .fa-lock {
-  color: red;
+  color: #ff007f; /* Reddish-purple color */
+  text-shadow: 0 0 7px #ff007f, 0 0 10px #ff007f, 0 0 21px #ff007f,
+    0 0 42px #ff00ff, 0 0 82px #ff00ff, 0 0 92px #ff00ff, 0 0 102px #ff00ff,
+    0 0 151px #ff00ff;
 }
 .fa-unlock {
   position: absolute;
@@ -48,7 +51,10 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: green;
+  color: #07eb44; /* Reddish-purple color */
+  text-shadow: 0 0 7px #ff007f, 0 0 10px #ff007f, 0 0 21px #ff007f,
+    0 0 42px #ff00ff, 0 0 82px #ff00ff, 0 0 92px #ff00ff, 0 0 102px #ff00ff,
+    0 0 151px #ff00ff;
   display: none;
 }
 
