@@ -66,7 +66,7 @@ const time = () => {
 
     // display alarmnotification
 
-    alarmNotification.classList.toggle("hide")
+    alarmNotification.classList.remove("hide")
     alarmNotiText.textContent = `${alarmHour.value.padStart(
       2,
       "0"
@@ -114,7 +114,7 @@ const time = () => {
     if (checkalarm === alarmtime) {
       alarmBeep.play()
       // removes alarm notification text
-      alarmNotification.classList.toggle("hide")
+      alarmNotification.classList.add("hide")
       alarmNotiText.textContent = ""
       // reset alarm time to empty string
       alarmtime = ""
