@@ -143,3 +143,28 @@ img {
     0 0 151px #ff00ff;
   border: 2px solid green;
 }
+
+
+/* tweaks */
+
+#digitalTime{
+  user-select: none;
+}
+#ampm{
+  user-select: none;
+}
+#format{
+  cursor: pointer;
+}
+
+.settingstext{
+  user-select: none;
+}
+
+.alarmtext{
+  user-select: none;
+}
+
+.greeting{
+  user-select: none;
+}
